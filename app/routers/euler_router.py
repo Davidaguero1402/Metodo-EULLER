@@ -2,7 +2,6 @@ from flask import request, jsonify, Blueprint
 import json
 from ..utils import metodo_euler
 
-
 euler_bp = Blueprint('euler', __name__)
 
 @euler_bp.route('euler', methods=['POST'])
