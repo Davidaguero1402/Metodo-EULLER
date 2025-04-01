@@ -1,0 +1,23 @@
+import requests
+
+# URL de la API (asegúrate de que Flask esté corriendo)
+URL = "http://127.0.0.1:5000/euler"
+
+# Datos de la ecuación diferencial
+data = {
+    "x0": 1,
+    "y0": 1,
+    "xf": 1.5,
+    "n": 5,
+    "edo": "0.2 - x - y"
+}
+
+# Enviar petición POST
+response = requests.post(URL, json=data)
+
+# Mostrar respuesta
+if response.status_code == 200:
+    print("📡 Respuesta de la API:")
+    print(response.json())
+else:
+    print("❌ Error:", response.status_code, response.text)
