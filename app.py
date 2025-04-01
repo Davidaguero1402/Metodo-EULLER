@@ -6,5 +6,7 @@ from app.routers.status_router import status_bp
 app.register_blueprint(euler_bp, url_prefix='/')
 app.register_blueprint(status_bp, url_prefix='/status')
 
+print(app.url_map)
+
 if __name__ == '__main__':
     app.run(debug=True)
