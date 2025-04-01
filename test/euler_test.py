@@ -1,7 +1,7 @@
 import requests
 
 # URL de la API (asegúrate de que Flask esté corriendo)
-URL = "http://127.0.0.1:5000/euler"
+URL = "https://metodo-euller-production.up.railway.app/euler"
 
 # Datos de la ecuación diferencial
 data = {

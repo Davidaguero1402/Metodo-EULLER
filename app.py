@@ -1,8 +1,10 @@
 from app import app
 from app import app
 from app.routers.euler_router import euler_bp
+from app.routers.status_router import status_bp
 
 app.register_blueprint(euler_bp, url_prefix='/')
+app.register_blueprint(status_bp, url_prefix='/status')
 
 if __name__ == '__main__':
     app.run(debug=True)
