@@ -1,8 +1,9 @@
 from app import app
-from app import app
 from app.routers.euler_router import euler_bp
 from app.routers.status_router import status_bp
+from flask_cors import CORS
 
+CORS(app)
 app.register_blueprint(euler_bp, url_prefix='/')
 app.register_blueprint(status_bp, url_prefix='/status')
 
